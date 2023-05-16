@@ -83,10 +83,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(145, 243);
+            this.button1.Location = new System.Drawing.Point(126, 247);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 31);
+            this.button1.Size = new System.Drawing.Size(326, 78);
             this.button1.TabIndex = 4;
             this.button1.Text = "Uložit nastavení";
             this.button1.UseVisualStyleBackColor = true;
@@ -123,9 +123,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(682, 243);
+            this.button2.Location = new System.Drawing.Point(606, 247);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 31);
+            this.button2.Size = new System.Drawing.Size(326, 78);
             this.button2.TabIndex = 8;
             this.button2.Text = "Odeslat e-mail";
             this.button2.UseVisualStyleBackColor = true;

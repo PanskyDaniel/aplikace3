@@ -9,7 +9,7 @@ namespace Aplikace3
 {
     public partial class Form1 : Form
     {
-        private const string nazevSouboru = "pokus.ini";
+        private const string nazevSouboru = "konfigurace.ini";
         private string soubor;
         public Form1()
         {
@@ -52,31 +52,31 @@ namespace Aplikace3
         {
             if (string.IsNullOrEmpty(SMTP.Text))
             {
-                MessageBox.Show("Hodnota SMPT musí být vyplněna!");
+                MessageBox.Show("Vyplňte pole pro SMTP!");
                 return;
             }
             if (string.IsNullOrEmpty(Port.Text))
             {
-                MessageBox.Show("Port musí být vyplněn!");
+                MessageBox.Show("Vyplňte pole pro port!");
                 return;
             }
 
             int test = 0;
             if (!Int32.TryParse(Port.Text, out test))
             {
-                MessageBox.Show("Port musí číslo!");
+                MessageBox.Show("Port musí být zapsán jako číslo!");
                 return;
             }
 
             if (string.IsNullOrEmpty(Odesilatel.Text))
             {
-                MessageBox.Show("Odesílatel musí být vyplněn!");
+                MessageBox.Show("Vyplňte pole pro odesílatele!");
                 return;
             }
 
             if (!IsValidEmail(Odesilatel.Text))
             {
-                MessageBox.Show("Neplatný e-mail odesílatele!");
+                MessageBox.Show("Zadejete platný e-mail odesílatele!");
                 return;
             }
 
@@ -121,7 +121,7 @@ namespace Aplikace3
 
             if (!IsValidEmail(Odesilatel.Text))
             {
-                MessageBox.Show("Neplatný e-mail odesílatele!");
+                MessageBox.Show("Zadal jste neplatný e-mail příjemce");
                 return;
             }
 
@@ -133,7 +133,7 @@ namespace Aplikace3
 
             if (!IsValidEmail(Prijemce.Text))
             {
-                MessageBox.Show("Neplatný e-mail příjemce!");
+                MessageBox.Show("Zadal jste neplatný e-mail příjemce!");
                 return;
 
             }
@@ -179,7 +179,6 @@ namespace Aplikace3
                 return false;
             }
         }
-
     }
 
     class IniFile
