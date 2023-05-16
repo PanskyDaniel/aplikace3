@@ -50,6 +50,36 @@ namespace Aplikace3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(SMTP.Text))
+            {
+                MessageBox.Show("Hodnota SMPT musí být vyplněna!");
+                return;
+            }
+            if (string.IsNullOrEmpty(Port.Text))
+            {
+                MessageBox.Show("Port musí být vyplněn!");
+                return;
+            }
+
+            int test = 0;
+            if (!Int32.TryParse(Port.Text, out test))
+            {
+                MessageBox.Show("Port musí číslo!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(Odesilatel.Text))
+            {
+                MessageBox.Show("Odesílatel musí být vyplněn!");
+                return;
+            }
+
+            if (!IsValidEmail(Odesilatel.Text))
+            {
+                MessageBox.Show("Neplatný e-mail odesílatele!");
+                return;
+            }
+
             IniFile ini = new IniFile(soubor);
 
             // Writing to INI file
